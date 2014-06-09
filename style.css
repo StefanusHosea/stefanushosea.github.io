@@ -3,7 +3,10 @@ body{
 	background-image:url(images/photo.jpg);
 	background-repeat:no-repeat;
 	background-size:cover;
-	font-family:Raleway,Open Sans,Droid Sans,arial,sans-serif;
+	font-family:Lato,Open Sans,Droid Sans,arial,sans-serif;
+}
+.clock{
+	font-size:100px;
 }
 .bio{
 	width:600px;

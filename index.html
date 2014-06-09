@@ -2,12 +2,65 @@
 	<html lang="en">
 	<head>
 		<meta charset="UTF-8">
+		<script type="text/javascript">
+            // This function gets the current time and injects it into the DOM
+            function updateClock() {
+                // Gets the current time
+                var now = new Date();
+ 
+                // Get the hours, minutes and seconds from the current time
+                var hours = now.getHours();
+                var minutes = now.getMinutes();
+                var seconds = now.getSeconds();
+ 
+                // Format hours, minutes and seconds
+                if (hours < 10) {
+                    hours = "0" + hours;
+                }
+                if (minutes < 10) {
+                    minutes = "0" + minutes;
+                }
+                if (seconds < 10) {
+                    seconds = "0" + seconds;
+                }
+ 
+                // Gets the element we want to inject the clock into
+                var elem = document.getElementById('clock');
+ 
+                // Sets the elements inner HTML value to our clock data
+                elem.innerHTML = hours + ':' + minutes + ':' + seconds;
+            }
+        </script>
+        <script type="text/javascript">
+		tday  =new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+		tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+
+		function GetClock(){
+		d = new Date();
+		nday   = d.getDay();
+		nmonth = d.getMonth();
+		ndate  = d.getDate();
+
+		document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+"";
+		setTimeout("GetClock()", 1000);
+		}
+		window.onload=GetClock;
+		</script>
 		<title>@stefanushosea</title>
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:100,700">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,700">
 		<link rel="stylesheet" href="style.css">
 	</head>
-	<body>
+	<body onload="setInterval('updateClock()', 200);">
+		<div class="clock">
+			<span style="color: #fff;" align="middle">
+			<h1 id="clock"></h1>
+			</span>
+			<br>
+		</div>
+		<span style="color: #fff;" align="middle">
+			<strong><div id="clockbox"></div></strong>
+		</span>
 		<div class="bio">
 			<span style="color: #fff;">
 			<h1>a personal page by <strong>@stefanushosea</strong></h1>
