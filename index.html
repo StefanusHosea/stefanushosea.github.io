@@ -31,21 +31,7 @@
                 elem.innerHTML = hours + ':' + minutes + ':' + seconds;
             }
         </script>
-        <script type="text/javascript">
-		tday  =new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
-		tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
-
-		function GetClock(){
-		d = new Date();
-		nday   = d.getDay();
-		nmonth = d.getMonth();
-		ndate  = d.getDate();
-
-		document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+"";
-		setTimeout("GetClock()", 1000);
-		}
-		window.onload=GetClock;
-		</script>
+        
 		<title>@stefanushosea</title>
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,700">
@@ -53,14 +39,12 @@
 	</head>
 	<body onload="setInterval('updateClock()', 200);">
 		<div class="clock">
-			<span style="color: #fff;" align="middle">
+			<span style="color: #fff;" align="center">
 			<h1 id="clock"></h1>
 			</span>
 			<br>
 		</div>
-		<span style="color: #fff;" align="middle">
-			<strong><div id="clockbox"></div></strong>
-		</span>
+		
 		<div class="bio">
 			<span style="color: #fff;">
 			<h1>a personal page by <strong>@stefanushosea</strong></h1>
@@ -79,5 +63,7 @@
 				</span>
 			</div>
 		</div>
+
+
 	</body>
 </html>
