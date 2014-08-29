@@ -1,10 +1,16 @@
 body{
-	background-color: #d8cbba;
-	background-image:url(images/photo.jpg);
-	background-repeat:no-repeat;
-	background-size:cover;
 	font-family:Lato,Open Sans,Droid Sans,arial,sans-serif;
 }
+
+#googlemaps { 
+  height: 100%; 
+  width: 100%; 
+  position:absolute; 
+  top: 0; 
+  left: 0; 
+  z-index: 0; /* Set z-index to 0 as it will be on a layer below the contact form */
+}
+
 .clock{
 	font-size:100px;
 	opacity:0.3;
