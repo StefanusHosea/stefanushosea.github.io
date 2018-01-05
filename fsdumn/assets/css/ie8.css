@@ -1,0 +1,58 @@
+/*
+
+     FFFFFFFF                               DD
+    FFFFFFFF                               DDD
+    FFF                                   DDDD
+    FFFFFFFF    SSSSSSS          DDDDDDD  DDDD
+    FFFFFFF   SSSSSSSSSSS      DDDDDDDDDDDDDDD
+    FFFF     SSSS             DDDDD    DDDDDDD
+    FFF      SSSS              DD        DDDDD
+    FFF       SSSSSSSS       D            DDDD
+    FFF          SSSSSSS     DDD          DDDD
+    FFF              SSSSS   D            DDDD 
+    FFF               SSSS     DDD      DDDDD 
+    FF       SSSSSSSSSSSS      DDDDDDDDDDDDD  
+    F         SSSSSSSSSS         DDDDDDDDD    
+
+    Panduan Identitas ▸ Fakultas Seni & Desain Universitas Multimedia Nusantara
+    Codecrafted by @stefanushosea in -6.267566, 106.641779 
+
+*/
+
+/* Button */
+
+	.button {
+		border: solid 2px !important;
+	}
+
+		.button.next {
+			padding-right: 1.75em;
+		}
+
+			.button.next:before, .button.next:after {
+				display: none;
+			}
+
+/* Tiles */
+
+	.tiles article {
+		width: 50%;
+		-ms-behavior: url("assets/js/ie/backgroundsize.min.htc");
+		background-size: cover;
+	}
+
+/* Banner */
+
+	#banner {
+		-ms-behavior: url("assets/js/ie/backgroundsize.min.htc");
+	}
+
+		#banner:after {
+			display: none;
+		}
+
+/* Menu */
+
+	#menu {
+		background: #242943;
+	}
